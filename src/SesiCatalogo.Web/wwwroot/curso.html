@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Detalhes do curso: módulos, carga horária, modalidade, público-alvo e certificação." />
+    <title>Detalhes do curso | SESI + Indústria</title>
+    <link rel="preload" href="/assets/fonts/OpenSans-Variable.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="/js/curso.js"></script>
+  </head>
+  <body data-page="cursos">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header data-site-header></header>
+
+    <main id="conteudo" tabindex="-1">
+      <div class="container" data-course-state></div>
+
+      <div data-course-content hidden>
+        <section class="course-hero" aria-labelledby="curso-titulo">
+          <div class="container course-hero__layout">
+            <div>
+              <div data-course-category></div>
+              <h1 id="curso-titulo" class="course-hero__title" data-course-name></h1>
+              <dl class="course-facts">
+                <div><dt>Início do curso</dt><dd data-course-start></dd></div>
+                <div><dt>Certificação</dt><dd>SESI</dd></div>
+                <div><dt>Carga horária</dt><dd data-course-workload></dd></div>
+                <div><dt>Modalidade</dt><dd data-course-modality></dd></div>
+                <div><dt>Status</dt><dd data-course-status></dd></div>
+                <div><dt>Código</dt><dd data-course-shortname></dd></div>
+              </dl>
+              <button class="button button--dark" type="button" data-enroll>
+                Matricule-se
+                <img class="button__arrow" src="/assets/icons/arrow-navigation-1.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
+            <div class="video">
+              <img data-course-image src="/assets/img/video-thumb.jpg" alt="" width="1280" height="720" />
+              <button class="video__play" type="button" aria-label="Reproduzir vídeo de apresentação do curso" data-notice="O vídeo de apresentação não está disponível nesta versão do catálogo."></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Diferenciais">
+          <div class="container">
+            <ul class="benefits benefits--four benefits--peach">
+              <li>
+                <img class="benefits__icon" src="/assets/icons/01-certificacao-bege.svg" alt="" width="48" height="48" />
+                <h2 class="benefits__title">Certificação SESI</h2>
+                <p class="benefits__text">Cursos com a melhor certificação do mercado industrial reconhecidos pelo SESI.</p>
+              </li>
+              <li>
+                <img class="benefits__icon" src="/assets/icons/02-professores-bege.svg" alt="" width="48" height="48" />
+                <h2 class="benefits__title">Professores especialistas</h2>
+                <p class="benefits__text">Contamos com professores reconhecidos por sua excelência no mercado.</p>
+              </li>
+              <li>
+                <img class="benefits__icon" src="/assets/icons/03-suporte-bege.svg" alt="" width="48" height="48" />
+                <h2 class="benefits__title">Suporte contínuo</h2>
+                <p class="benefits__text">Você não está sozinho! Acompanhamento online durante todo o curso.</p>
+              </li>
+              <li>
+                <img class="benefits__icon" src="/assets/icons/04-flexibilidade-bege.svg" alt="" width="48" height="48" />
+                <h2 class="benefits__title">Flexibilidade</h2>
+                <p class="benefits__text">Turmas presenciais e online com horários que se adaptam à sua rotina.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="sobre-titulo">
+          <div class="container about__layout">
+            <div class="about__intro">
+              <h2 id="sobre-titulo" class="section__title">Sobre o curso</h2>
+              <p class="about__text" data-course-description></p>
+              <div class="about__audience">
+                <h3>Público-alvo</h3>
+                <p data-course-audience></p>
+              </div>
+            </div>
+
+            <div>
+              <details class="accordion__item">
+                <summary>Módulos</summary>
+                <div class="accordion__content">
+                  <ol class="module-list" data-course-modules></ol>
+                </div>
+              </details>
+
+              <details class="accordion__item">
+                <summary>Aulas online e avaliações</summary>
+                <div class="accordion__content">
+                  <h4>Aulas online</h4>
+                  <p>As aulas são organizadas em módulos temáticos e disponibilizadas em formato multimídia, combinando:</p>
+                  <ul>
+                    <li>Vídeo-aulas com especialistas da área, gravadas em alta qualidade e com recursos visuais que facilitam a compreensão dos conteúdos técnicos.</li>
+                    <li>Materiais complementares como apostilas digitais, infográficos, artigos e estudos de caso.</li>
+                    <li>Atividades interativas, como quizzes, simulações e fóruns de discussão, que promovem o engajamento e a troca de experiências entre os participantes.</li>
+                    <li>Acesso multiplataforma, permitindo que os alunos estudem pelo computador, tablet ou celular, a qualquer hora e de qualquer lugar.</li>
+                  </ul>
+                  <p>Cada aula é acompanhada de recursos de acessibilidade, como legendas, transcrição de áudio e navegação intuitiva, garantindo inclusão e autonomia para todos os perfis de usuários.</p>
+                  <h4>Provas e Avaliações</h4>
+                  <p>As avaliações são realizadas diretamente na plataforma, com foco na verificação do aprendizado e na aplicação prática dos conhecimentos adquiridos:</p>
+                  <ul>
+                    <li>Provas objetivas ao final de cada módulo, com correção automática e feedback imediato.</li>
+                    <li>Estudos de caso e atividades práticas, que simulam situações reais da indústria e exigem análise crítica e tomada de decisão.</li>
+                    <li>Avaliação final integradora, que consolida os conteúdos do curso e valida a competência do aluno para atuar com segurança no ambiente industrial.</li>
+                    <li>Sistema antifraude, com controle de tempo, embaralhamento de questões e, opcionalmente, reconhecimento facial para garantir a integridade das avaliações.</li>
+                  </ul>
+                  <p>Ao concluir o curso e ser aprovado nas avaliações, o aluno recebe um certificado digital reconhecido, que pode ser compartilhado em redes profissionais e utilizado para comprovação de capacitação técnica.</p>
+                </div>
+              </details>
+
+              <details class="accordion__item">
+                <summary>Dúvidas frequentes</summary>
+                <div class="accordion__content">
+                  <h4>1. O curso é totalmente online?</h4>
+                  <p>Depende da modalidade indicada na ficha do curso. Nos cursos online, todas as aulas, atividades e avaliações são realizadas pela plataforma digital, permitindo que o aluno estude de onde estiver, no seu próprio ritmo. Nos cursos presenciais, os encontros acontecem em unidades do SESI.</p>
+                  <h4>2. Preciso estar disponível em horários específicos?</h4>
+                  <p>Nos cursos online, não. As aulas são gravadas e ficam disponíveis 24 horas por dia. O aluno pode acessar o conteúdo quando for mais conveniente, respeitando os prazos de cada módulo.</p>
+                  <h4>3. Como são feitas as avaliações?</h4>
+                  <p>As avaliações são realizadas diretamente na plataforma, por meio de provas objetivas, estudos de caso e atividades práticas. Algumas avaliações podem ter tempo limitado e exigem atenção às instruções.</p>
+                  <h4>4. O curso oferece certificado?</h4>
+                  <p>Sim. Ao concluir todos os módulos e ser aprovado nas avaliações, o aluno recebe um certificado digital de conclusão, válido em todo o território nacional.</p>
+                  <h4>5. Quem são os professores?</h4>
+                  <p>O corpo docente é formado por especialistas, engenheiros e professores com ampla experiência em segurança do trabalho e atuação direta na indústria. Os perfis dos docentes estão disponíveis na plataforma.</p>
+                  <h4>6. Há suporte para dúvidas durante o curso?</h4>
+                  <p>Sim. Os alunos podem enviar dúvidas por meio dos fóruns de discussão, chats da plataforma ou durante os webinários ao vivo. A equipe pedagógica está disponível para auxiliar durante todo o curso.</p>
+                  <h4>7. O curso exige algum conhecimento prévio?</h4>
+                  <p>Não é obrigatório, mas é recomendado que o aluno tenha interesse ou alguma familiaridade com o ambiente industrial. O curso foi estruturado para atender tanto iniciantes quanto profissionais em busca de atualização.</p>
+                  <h4>8. Posso acessar o curso pelo celular?</h4>
+                  <p>Sim. A plataforma é responsiva e compatível com computadores, tablets e smartphones, garantindo uma experiência completa em qualquer dispositivo.</p>
+                  <h4>9. Quanto tempo tenho para concluir o curso?</h4>
+                  <p>O prazo para conclusão varia conforme o plano escolhido. Em geral, o aluno tem entre 3 a 6 meses para finalizar todos os módulos e avaliações.</p>
+                  <h4>10. O curso é reconhecido por órgãos oficiais?</h4>
+                  <p>O curso segue as diretrizes das Normas Regulamentadoras (NRs) e boas práticas da área, sendo reconhecido como formação complementar. Para certificações oficiais, é necessário verificar os requisitos específicos de cada órgão regulador.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="container sticky-bar">
+            <div class="sticky-bar__inner">
+              <p class="sticky-bar__name" data-course-name-bar></p>
+              <button class="button button--light" type="button" data-enroll>
+                Matricule-se
+                <img class="button__arrow" src="/assets/icons/arrow-navigation-1.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section testimonials testimonials--peach" aria-labelledby="depoimentos-titulo">
+          <div class="container carousel" data-carousel="depoimentos">
+            <p class="section__eyebrow">Depoimentos</p>
+            <h2 id="depoimentos-titulo" class="section__title">Quem fez recomenda</h2>
+            <ul class="carousel__track" data-carousel-track aria-label="Depoimentos de alunos">
+              <li>
+                <figure class="testimonial">
+                  <blockquote><p>“A experiência do curso foi incrível! As aulas foram muito bem estruturadas e o cronograma foi cuidadosamente planejado, facilitando muito o aprendizado.”</p></blockquote>
+                  <figcaption><span class="testimonial__name">Lucas Pereira</span><span>Analista na Empresa X</span><span class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /></span></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="testimonial">
+                  <blockquote><p>“Concluir o curso foi uma jornada enriquecedora. As aulas eram dinâmicas e o horário foi organizado para maximizar nosso tempo de estudo.”</p></blockquote>
+                  <figcaption><span class="testimonial__name">Mariana Costa</span><span>Gestora na Empresa X</span><span class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /></span></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="testimonial">
+                  <blockquote><p>“O curso superou minhas expectativas! As aulas eram bem elaboradas e o planejamento do horário ajudou a manter o foco e a produtividade.”</p></blockquote>
+                  <figcaption><span class="testimonial__name">Thiago Almeida</span><span>Técnico na Empresa X</span><span class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /></span></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="testimonial">
+                  <blockquote><p>“Finalizar o curso foi uma experiência motivadora. As aulas foram muito bem preparadas e o cronograma foi ideal para o aprendizado.”</p></blockquote>
+                  <figcaption><span class="testimonial__name">Fernanda Silva</span><span>Analista na Empresa X</span><span class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /></span></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="testimonial">
+                  <blockquote><p>“A conclusão do curso foi uma etapa gratificante. As aulas bem organizadas e o horário estruturado ajudaram a facilitar meu aprendizado.”</p></blockquote>
+                  <figcaption><span class="testimonial__name">Gabriel Santos</span><span>Analista na Empresa X</span><span class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /><img src="/assets/icons/star.svg" alt="" width="16" height="16" /></span></figcaption>
+                </figure>
+              </li>
+            </ul>
+            <div class="carousel__footer">
+              <div class="carousel__controls">
+                <button class="icon-button" type="button" data-carousel-prev aria-label="Depoimentos anteriores">
+                  <img src="/assets/icons/arrow-navigation.svg" alt="" width="40" height="40" />
+                </button>
+                <button class="icon-button icon-button--next" type="button" data-carousel-next aria-label="Próximos depoimentos">
+                  <img src="/assets/icons/arrow-navigation.svg" alt="" width="40" height="40" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" aria-labelledby="contato-titulo">
+          <div class="container">
+            <p class="section__eyebrow">Precisa de ajuda para decidir?</p>
+            <h2 id="contato-titulo" class="contact__title">Fale com a gente</h2>
+            <a class="button button--light" href="mailto:contato@sesindustria.com.br">
+              Mandar uma mensagem
+              <img class="button__arrow" src="/assets/icons/arrow-navigation-1.svg" alt="" width="20" height="20" />
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer data-site-footer></footer>
+  </body>
+</html>

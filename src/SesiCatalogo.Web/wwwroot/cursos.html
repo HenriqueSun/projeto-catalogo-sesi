@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pesquise e filtre os cursos do catálogo SESI + Indústria por categoria, modalidade e status." />
+    <title>Catálogo de cursos | SESI + Indústria</title>
+    <link rel="preload" href="/assets/fonts/OpenSans-Variable.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="/js/catalogo.js"></script>
+  </head>
+  <body data-page="cursos">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header data-site-header></header>
+
+    <main id="conteudo" tabindex="-1">
+      <section class="page-banner" aria-labelledby="catalogo-titulo">
+        <div class="container">
+          <h1 id="catalogo-titulo">Catálogo de cursos</h1>
+          <p>Encontre a capacitação ideal para a sua carreira na indústria. Pesquise pelo nome ou combine os filtros.</p>
+        </div>
+      </section>
+
+      <div class="container section">
+        <form class="filters" role="search" aria-label="Pesquisar e filtrar cursos" data-filters novalidate>
+          <div class="filters__fields">
+            <div class="field field--search">
+              <label for="filtro-busca">Pesquisar pelo nome</label>
+              <input id="filtro-busca" name="search" type="search" maxlength="100" autocomplete="off" placeholder="Ex.: Matemática, Inglês técnico" />
+            </div>
+            <div class="field">
+              <label for="filtro-categoria">Categoria</label>
+              <select id="filtro-categoria" name="categoryId"><option value="">Todas</option></select>
+            </div>
+            <div class="field">
+              <label for="filtro-modalidade">Modalidade</label>
+              <select id="filtro-modalidade" name="modalityId"><option value="">Todas</option></select>
+            </div>
+            <div class="field">
+              <label for="filtro-status">Status</label>
+              <select id="filtro-status" name="statusId"><option value="">Todos</option></select>
+            </div>
+          </div>
+          <div class="filters__actions">
+            <p class="results-count" data-results-count role="status" aria-live="polite"></p>
+            <button class="button button--outline" type="reset" data-clear-filters>Limpar filtros</button>
+          </div>
+        </form>
+
+        <div data-results-state></div>
+        <ul class="course-grid" data-results aria-label="Cursos encontrados"></ul>
+      </div>
+    </main>
+
+    <footer data-site-footer></footer>
+  </body>
+</html>

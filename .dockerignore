@@ -1,0 +1,12 @@
+.dotnet/
+.git/
+.vs/
+.vscode/
+**/bin/
+**/obj/
+publish/
+dist/
+TestResults/
+*.db
+*.db-shm
+*.db-wal

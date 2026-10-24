@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sesi-catalogo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_FORWARDEDHEADERS_ENABLED
+        value: "true"
