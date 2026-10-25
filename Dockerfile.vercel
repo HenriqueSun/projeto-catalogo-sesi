@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+COPY src/SesiCatalogo.Web/SesiCatalogo.Web.csproj src/SesiCatalogo.Web/
+RUN dotnet restore src/SesiCatalogo.Web/SesiCatalogo.Web.csproj
+COPY src/ src/
+RUN dotnet publish src/SesiCatalogo.Web/SesiCatalogo.Web.csproj -c Release -o /app/publish --no-restore /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+USER $APP_UID
+# Vercel containers have a read-only filesystem except /tmp, and the non-root user cannot bind port 80.
+# The PORT environment variable in the Vercel project settings must match ASPNETCORE_HTTP_PORTS.
+ENV ASPNETCORE_ENVIRONMENT=Production \
+    ASPNETCORE_HTTP_PORTS=8080 \
+    PORT=8080 \
+    ASPNETCORE_FORWARDEDHEADERS_ENABLED=true \
+    Database__Path=/tmp/catalog.db \
+    DOTNET_EnableDiagnostics=0
+ENTRYPOINT ["dotnet", "SesiCatalogo.Web.dll"]

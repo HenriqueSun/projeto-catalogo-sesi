@@ -176,6 +176,14 @@ A hospedagem prevista é o [Render](https://render.com) no plano gratuito, usand
 
 O banco SQLite é recriado a partir das migrations a cada inicialização do contêiner. Isso basta porque os dados são somente leitura.
 
+**Alternativa: Vercel (plano Hobby, gratuito).** O Vercel não tem runtime .NET próprio, mas executa a mesma aplicação ASP.NET Core como contêiner, a partir do `Dockerfile.vercel` e do `vercel.json` da raiz:
+
+1. Importar o repositório no Vercel, mantendo a raiz do projeto como diretório raiz e o *Framework Preset* como "Other".
+2. Em *Settings → Environment Variables*, criar `PORT` com o valor `8080`. O Vercel envia o tráfego para a porta 80 por padrão, mas o contêiner roda sem privilégios de root e escuta na 8080 (`ASPNETCORE_HTTP_PORTS`).
+3. Fazer um novo deploy.
+
+No Vercel, o disco do contêiner é somente leitura, exceto `/tmp`. Por isso o `Dockerfile.vercel` grava o banco em `/tmp/catalog.db` (variável `Database__Path`). Como no Render, ele é recriado a cada inicialização.
+
 **ZIP de publicação:** gerado com:
 
 ```bash
