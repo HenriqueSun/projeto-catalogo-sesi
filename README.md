@@ -147,8 +147,8 @@ CourseStatus (Id, Name) ──────┘          WorkloadHours, TargetAudi
 
 ## 9. Estratégia de responsividade
 
-- Abordagem fluida, com `clamp()` na tipografia e nos espaçamentos, CSS Grid e Flexbox. Os pontos de quebra ficam em 560, 640, 800 e 900 px.
-- **Cabeçalho:** abaixo de 640 px, a navegação vira um menu expansível, com botão e `aria-expanded`.
+- Abordagem fluida, com `clamp()` na tipografia e nos espaçamentos, CSS Grid e Flexbox. Os pontos de quebra ficam em 560, 720, 800 e 900 px.
+- **Cabeçalho:** abaixo de 720 px, a navegação vira um menu expansível, com botão e `aria-expanded`; o botão "Área do aluno" continua visível.
 - **Grade do catálogo:** usa `auto-fill`/`minmax`, passando de 1 coluna no celular para até 3 no desktop. Os filtros se empilham em telas estreitas.
 - **Carrosséis (cursos e depoimentos):** rolagem horizontal nativa com `scroll-snap`, que funciona por toque. As setas são desativadas nas extremidades.
 - **Verificação:** feita no navegador em 375 px e em 1920 px, sem rolagem horizontal da página.
@@ -162,7 +162,7 @@ CourseStatus (Id, Name) ──────┘          WorkloadHours, TargetAudi
 - Ao limpar os filtros, o foco volta para o campo de pesquisa.
 - Acordeões com `details`/`summary` nativos, operáveis por teclado sem JavaScript.
 - Imagens informativas têm texto alternativo; imagens e ícones decorativos usam `alt=""` ou `aria-hidden`.
-- Contraste do texto sobre fundos vermelhos reforçado com degradê escuro.
+- Contraste do texto sobre fotos reforçado com degradê escuro.
 - `prefers-reduced-motion` desativa animações e rolagem suave.
 - Idioma da página declarado: `lang="pt-BR"`.
 
@@ -202,7 +202,9 @@ O conteúdo da pasta `publish` é então compactado em `dist/SesiCatalogo-publis
 | Categoria "Linguagens" e cursos adicionais | O enunciado exige no mínimo 3 categorias e 6 cursos. O Figma mostra 2 categorias. |
 | Datas de início ajustadas para datas futuras | As datas do Figma já passaram, o que conflitaria com o status "Inscrições abertas" |
 | Imagens dos cartões recortadas das 3 fotos fornecidas | As fotos originais dos cartões não estavam entre os arquivos fornecidos |
-| Links sem destino real omitidos ("Área do aluno", redes sociais, blog, termos) | Evita links quebrados; "Sobre" aponta para a seção de impacto da página inicial |
+| Links sem destino real omitidos (redes sociais, blog, termos) | Evita links quebrados; "Sobre" aponta para a seção de impacto da página inicial |
+| "Área do aluno" como botão estático no cabeçalho | Presente como elemento visual; a área do aluno exige login e está fora do escopo |
+| Visual modernizado: superfícies claras no lugar dos blocos vermelho-escuro e pêssego, cartões brancos com imagem no topo, cantos arredondados e cabeçalho translúcido | Mesma estrutura, conteúdo e identidade (vermelho SESI como cor de destaque), com aparência mais leve |
 | "Cursos populares" no rodapé gerado a partir da API | Garante que os links levem a cursos que existem |
 | Nome do 5º depoimento inferido | O cartão aparece cortado no Figma |
 | Medidas, cores e espaçamentos aproximados | A API do Figma exige permissão de edição; os valores foram obtidos por inspeção visual do protótipo público |

@@ -25,9 +25,8 @@ function renderHeader(container, activePage) {
   );
 
   const toggle = el("button", {
-    className: "button button--outline site-nav__toggle",
-    text: "Menu",
-    attrs: { type: "button", "aria-expanded": "false", "aria-controls": "menu-principal" },
+    className: "icon-button site-nav__toggle",
+    attrs: { type: "button", "aria-label": "Menu", "aria-expanded": "false", "aria-controls": "menu-principal" },
   });
 
   toggle.addEventListener("click", () => {
@@ -48,7 +47,12 @@ function renderHeader(container, activePage) {
           },
         }),
       ]),
-      el("nav", { attrs: { "aria-label": "Principal" } }, [toggle, list]),
+      el("nav", { className: "site-nav", attrs: { "aria-label": "Principal" } }, [toggle, list]),
+      el("button", {
+        className: "button button--dark button--sm site-header__student",
+        text: "Área do aluno",
+        attrs: { type: "button" },
+      }),
     ]),
   );
 }
